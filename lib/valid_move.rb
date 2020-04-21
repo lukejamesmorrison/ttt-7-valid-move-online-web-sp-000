@@ -2,11 +2,7 @@
 
 def valid_move?(board, index)
   # If move is not on board
-  if index > board.length - 1
-    return false
-  end
-
-  !position_taken?(board, index)
+  index > board.length - 1 ? false : !position_taken?(board, index)
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
